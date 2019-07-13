@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run ts-node && parcel *.html",
+    "start": "yarn run nav-gen & parcel slides/*.html --open",
     "nav-gen": "ts-node ./tools/generate-navigation.ts"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.6.2",
-    "@types/shelljs": "^0.8.5"
+    "@types/shelljs": "^0.8.5",
+    "sass": "^1.22.4"
   }
 }

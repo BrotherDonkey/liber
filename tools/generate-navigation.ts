@@ -12,7 +12,7 @@ const htmlRegex = /\.html$/i;
 const titleRegex = /\<title\>(.*)\<\/title\>/gi;
 
 async function generateNavigation() {
-    const files = await readddirAsync('./');
+    const files = await readddirAsync('./slides');
     const htmlfiles = []
 
     for (const file of files) {
@@ -44,7 +44,7 @@ async function generateNavigation() {
 
     ensureDist();
 
-    fs.writeFile('./presentation.json', JSON.stringify(presentationJSON), () => { });
+    fs.writeFile('./slides/presentation.json', JSON.stringify(presentationJSON), () => { });
     fs.writeFile('./dist/presentation.json', JSON.stringify(presentationJSON), () => { });
 }
 
