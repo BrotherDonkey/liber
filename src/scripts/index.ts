@@ -32,5 +32,5 @@ export function bootstrapThemes() {
 }
 
 export function removeAllThemeClass(element: HTMLElement) {
-    element.classList.remove('theme-fox', 'theme-lightning', 'theme-skull', 'theme-comet');
+    element.classList.remove('theme-fox', 'theme-lightning', 'theme-skull', 'theme-comet', 'theme-ice-cream');
 }

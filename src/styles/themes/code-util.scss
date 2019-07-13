@@ -1,5 +1,48 @@
 
-@mixin code-highlight($base-code-color) {
+@mixin code-highlight-darken($base-code-color) {
+    .hljs-keyword {
+        color: darken($base-code-color, 5%);
+    }
+    .hljs-built_in {
+        color: darken($base-code-color, 10%);
+    }
+    .hljs-type {
+        color: darken($base-code-color, 15%);
+    }
+    .hljs-literal {
+        color: darken($base-code-color, 20%);
+    }
+    .hljs-number {
+        color: darken($base-code-color, 20%);
+    }
+    .hljs-regexp {
+        color: darken($base-code-color, 25%);
+    }
+    .hljs-string {
+        color: darken($base-code-color, 35%);
+    }
+    .hljs-subst {
+        color: darken($base-code-color, 45%);
+    }
+    .hljs-symbol {
+        color: darken($base-code-color, 55%);
+    }
+    .hljs-class {
+        color: darken($base-code-color, 65%);
+    }
+    .hljs-function {
+        color: darken($base-code-color, 50%);
+    }
+    .hljs-title {
+        color: darken($base-code-color, 60%);
+    }
+    .hljs-params {
+        color: $base-code-color;
+    }
+}
+
+
+@mixin code-highlight-lighten($base-code-color) {
     .hljs-keyword {
         color: lighten($base-code-color, 5%);
     }

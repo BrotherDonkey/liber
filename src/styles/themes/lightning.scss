@@ -1,0 +1,16 @@
+%theme-lightning {
+    --text: #fde74c;
+    --background: #0b132b;
+    --border: #412234;
+    --code-background: #1c2541;
+    --code-text: #c3f73a;
+    --accent: #c3f73a;
+}
+
+html.theme-lightning {
+    @extend %theme-lightning;
+
+    pre > code {
+        @include code-highlight-lighten(#c3f73a)
+    }
+}

@@ -7,10 +7,10 @@
     --accent: #b2b2b2;
 }
 
-.theme-skull {
+html.theme-skull {
     @extend %theme-skull;
-}
 
-.theme-skull pre > code {
-    @include code-highlight(#ff101f)
+    pre > code {
+        @include code-highlight-lighten(#ff101f)
+    }
 }

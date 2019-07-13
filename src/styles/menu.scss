@@ -16,11 +16,6 @@
     align-items: center;
     height: 100%;
 
-    &:not(:empty) {
-        border: 1px solid $border;
-        border-radius: 290486px;
-    }
-
     > button {
         padding: 6px;
         appearance: none;
@@ -45,4 +40,18 @@
 
 .menu:not(:hover) {
     opacity: 0;
+}
+
+.menu {
+    .libre-icon svg {
+        height: 58px;
+        width: 58px;
+    }
+}
+
+.menu-right {
+     &:not(:empty) {
+        border: 1px solid $border;
+        border-radius: 290486px;
+    }
 }

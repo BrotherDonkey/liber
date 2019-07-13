@@ -1,0 +1,16 @@
+%theme-ice-cream {
+    --text: #5ca4a9;
+    --background: #e6ebe0;
+    --border: #9bc1bc;
+    --code-background: #f4f1bb;
+    --code-text: #5ca4a9;
+    --accent: #ed6a5a;
+}
+
+html.theme-ice-cream {
+    @extend %theme-ice-cream;
+
+    pre > code {
+        @include code-highlight-darken(#5ca4a9)
+    }
+}

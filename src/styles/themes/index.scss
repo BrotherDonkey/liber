@@ -4,6 +4,7 @@
 @import './skull.scss';
 @import './fox.scss';
 @import './lightning.scss';
+@import './ice-cream.scss';
 
 $text: var(--text);
 $background: var(--background);
@@ -13,18 +14,16 @@ $code-text: var(--code-text);
 $accent: var(--accent);
 
 // set default theme
-
-:root,
-html.theme-fox {
+:root {
     @extend %theme-fox;
-}
-
-html.theme-skull {
-    @extend %theme-skull;
 }
 
 p {
     color: $accent;
+}
+
+.libre-text p {
+    color: $text;
 }
 
 code,
