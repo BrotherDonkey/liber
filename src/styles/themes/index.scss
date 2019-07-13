@@ -13,9 +13,14 @@ $code-background: var(--code-background);
 $code-text: var(--code-text);
 $accent: var(--accent);
 
-// set default theme
+// setting root to black prevent flashing of a default theme, or white
 :root {
-    @extend %theme-fox;
+    --text: black;
+    --background: black;
+    --border: black;
+    --code-background: black;
+    --code-text: black;
+    --accent: black;
 }
 
 p {

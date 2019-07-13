@@ -16,6 +16,17 @@ h1 {
     }
 }
 
+.is-vertically-centered {
+    &,
+    & > * {
+        display: flex;
+        flex-direction: row;
+        height: calc(100vh - 200px);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 img {
     margin-top: 24px;
     width: 100%;
