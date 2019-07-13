@@ -1,6 +1,7 @@
 //@ts-check
-const fs = require('fs');
-const { promisify } = require('util');
+import * as fs from 'fs';
+import { mkdir } from 'shelljs';
+import { promisify } from 'util';
 
 const readFileAsync = promisify(fs.readFile);
 const readddirAsync = promisify(fs.readdir);
@@ -25,9 +26,9 @@ async function generateNavigation() {
     const jsonStructure = await Promise.all(sortedHtmlFiles.map(async (file, i) => {
         const fileContents = await readFileAsync(file);
         const fileString = fileContents.toString();
-        let matches = [];
+        let matches: RegExpExecArray | null;
         let title = 'No title in html';
-        while ((matches = titleRegex.exec(fileString)) !== null && matches.length < 1) {
+        while ((matches = titleRegex.exec(fileString)) !== null) {
             title = matches[1];
         }
         return {
@@ -41,7 +42,19 @@ async function generateNavigation() {
         slides: jsonStructure
     };
 
+    ensureDist();
+
     fs.writeFile('./presentation.json', JSON.stringify(presentationJSON), () => { });
+    fs.writeFile('./dist/presentation.json', JSON.stringify(presentationJSON), () => { });
+}
+
+function ensureDist() {
+    fs.exists('./dist', exists => {
+        if (exists) {
+            return;
+        }
+        mkdir('./dist');
+    })
 }
 
 generateNavigation()
