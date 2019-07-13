@@ -1,6 +1,7 @@
 @import './code-util.scss';
+
 @import './comet.scss';
-@import './bluebird.scss';
+@import './skull.scss';
 @import './fox.scss';
 @import './lightning.scss';
 
@@ -13,13 +14,13 @@ $accent: var(--accent);
 
 // set default theme
 
-:root {
+:root,
+html.theme-fox {
     @extend %theme-fox;
 }
 
-body {
-    background: $background;
-    color: $text;
+html.theme-skull {
+    @extend %theme-skull;
 }
 
 p {
@@ -30,4 +31,9 @@ code,
 pre > code {
     background: $code-background;
     border: $border;
+}
+
+body {
+    background: $background;
+    color: $text;
 }

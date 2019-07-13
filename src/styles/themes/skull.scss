@@ -1,0 +1,16 @@
+%theme-skull {
+    --text: #ff101f;
+    --background: #353535;
+    --border: #f1f5f2;
+    --code-background: #000000;
+    --code-text: #ff101f;
+    --accent: #b2b2b2;
+}
+
+.theme-skull {
+    @extend %theme-skull;
+}
+
+.theme-skull pre > code {
+    @include code-highlight(#ff101f)
+}
