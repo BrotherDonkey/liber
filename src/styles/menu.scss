@@ -1,0 +1,48 @@
+
+.menu {
+    display: flex;
+    width: calc(100% - 48px);
+    margin: 12px auto 0;
+    padding: 12px 6px;
+    height: 68px;
+    transition: opacity .5s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-right,
+.menu-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &:not(:empty) {
+        border: 1px solid $border;
+        border-radius: 290486px;
+    }
+
+    > button {
+        padding: 6px;
+        appearance: none;
+        border: none;
+        background: none;
+        background: white;
+        border-radius: 290486px;
+        width: 38px;
+        height: 38px;
+        margin: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        > svg {
+            height: 32px;
+            width: 32px;
+        }
+    }
+}
+
+.menu:not(:hover) {
+    opacity: 0;
+}

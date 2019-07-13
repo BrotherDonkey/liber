@@ -1,4 +1,10 @@
-body {
-    background-color: black;
-    color: white;
-}
+@import './standardize/normalize.scss';
+@import './standardize/minireset.scss';
+
+@import './text/index.scss';
+@import './themes/index.scss';
+
+@import './general.scss';
+
+@import './menu.scss';
+@import './code.scss';

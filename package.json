@@ -5,16 +5,20 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn run nav-gen & parcel slides/*.html --open",
-    "nav-gen": "ts-node ./tools/generate-navigation.ts"
+    "nav-gen": "ts-node ./tools/generate-navigation.ts",
+    "copy-fonts": "ts-node ./tools/copy-fonts.ts"
   },
   "dependencies": {
     "fs": "^0.0.1-security",
+    "highlight.js": "^9.15.8",
+    "posthtml-include": "^1.2.0",
     "shelljs": "^0.8.3",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
     "util": "^0.12.1"
   },
   "devDependencies": {
+    "@types/highlight.js": "^9.12.3",
     "@types/node": "^12.6.2",
     "@types/shelljs": "^0.8.5",
     "sass": "^1.22.4"

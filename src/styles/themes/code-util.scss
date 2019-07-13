@@ -1,0 +1,42 @@
+
+@mixin code-highlight($base-code-color) {
+    .hljs-keyword {
+        color: lighten($base-code-color, 5%);
+    }
+    .hljs-built_in {
+        color: lighten($base-code-color, 10%);
+    }
+    .hljs-type {
+        color: lighten($base-code-color, 15%);
+    }
+    .hljs-literal {
+        color: lighten($base-code-color, 20%);
+    }
+    .hljs-number {
+        color: lighten($base-code-color, 20%);
+    }
+    .hljs-regexp {
+        color: lighten($base-code-color, 25%);
+    }
+    .hljs-string {
+        color: lighten($base-code-color, 35%);
+    }
+    .hljs-subst {
+        color: lighten($base-code-color, 45%);
+    }
+    .hljs-symbol {
+        color: lighten($base-code-color, 55%);
+    }
+    .hljs-class {
+        color: lighten($base-code-color, 65%);
+    }
+    .hljs-function {
+        color: lighten($base-code-color, 50%);
+    }
+    .hljs-title {
+        color: lighten($base-code-color, 60%);
+    }
+    .hljs-params {
+        color: $base-code-color;
+    }
+}

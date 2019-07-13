@@ -7,25 +7,10 @@ export const navMap: NavigationMap = {
     '40': 'back'
 }
 
-
-export async function getPresentationData(): Promise<SlideNavigation> {
+async function getPresentationData(): Promise<SlideNavigation> {
     const navInfo = await fetch('./presentation.json');
     const json = await navInfo.json();
     return json;
-}
-
-export interface NavigationMap {
-    [key: string]: 'next' | 'back';
-}
-
-export interface SlideNavigation {
-    slides: Slide[];
-}
-
-export interface Slide {
-    title: string;
-    file: string;
-    index: number;
 }
 
 export async function bootstrapNavigation() {
@@ -38,14 +23,10 @@ export async function bootstrapNavigation() {
 
         const action = navMap[e.keyCode];
         const { slides } = slideNav;
-        // figure out where in the presentation we are
 
         const currentIndex = slides.findIndex(s => `/${s.file}` === location.pathname);
         const previousSlide = currentIndex !== 0 ? slides[currentIndex - 1] : null;
         const nextSlide = currentIndex !== slides.length - 1 ? slides[currentIndex + 1] : null;
-
-        // will need the previous and next
-        debugger;
 
         switch (action) {
             case 'next':
@@ -64,9 +45,16 @@ export async function bootstrapNavigation() {
     });
 }
 
+export interface NavigationMap {
+    [key: string]: 'next' | 'back';
+}
 
-// if first slide and back, do nothing
+export interface SlideNavigation {
+    slides: Slide[];
+}
 
-// if last slide and next, do nothing
-
-// otherwise go to the next or back with keypress
+export interface Slide {
+    title: string;
+    file: string;
+    index: number;
+}

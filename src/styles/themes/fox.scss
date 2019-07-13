@@ -1,0 +1,21 @@
+// text color
+// border color
+// background color
+// accent color
+
+%theme-fox {
+    --text: #cc7e2e;
+    --background: #351b00;
+    --border: #881600;
+    --code-background: #701300;
+    --code-text: #e2b78b;
+    --accent: #a7a2a9;
+}
+
+.theme-fox {
+    @extend %theme-fox;
+
+    pre > code {
+        @include code-highlight(#e2b78b)
+    }
+}

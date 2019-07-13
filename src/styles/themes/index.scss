@@ -1,0 +1,33 @@
+@import './code-util.scss';
+@import './comet.scss';
+@import './bluebird.scss';
+@import './fox.scss';
+@import './lightning.scss';
+
+$text: var(--text);
+$background: var(--background);
+$border: var(--border);
+$code-background: var(--code-background);
+$code-text: var(--code-text);
+$accent: var(--accent);
+
+// set default theme
+
+:root {
+    @extend %theme-fox;
+}
+
+body {
+    background: $background;
+    color: $text;
+}
+
+p {
+    color: $accent;
+}
+
+code,
+pre > code {
+    background: $code-background;
+    border: $border;
+}
