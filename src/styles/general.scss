@@ -7,3 +7,18 @@ h1 {
     font-size: 3rem;
 }
 
+.is-centered {
+    &,
+    & > * {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+img {
+    margin-top: 24px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
