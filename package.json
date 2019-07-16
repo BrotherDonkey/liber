@@ -6,7 +6,8 @@
   "scripts": {
     "start": "yarn run nav-gen & parcel slides/*.html --open",
     "nav-gen": "ts-node ./tools/generate-navigation.ts",
-    "copy-fonts": "ts-node ./tools/copy-fonts.ts"
+    "copy-fonts": "ts-node ./tools/copy-fonts.ts",
+    "new-slide": "ts-node ./tools/new-slide.ts"
   },
   "dependencies": {
     "fs": "^0.0.1-security",

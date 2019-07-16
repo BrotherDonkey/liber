@@ -10,7 +10,7 @@ const presentationStructure = {
     presentation: []
 }
 
-const htmlRegex = /\.html$/i;
+export const htmlRegex = /\.html$/i;
 const titleRegex = /\<title\>(.*)\<\/title\>/gi;
 
 async function generateNavigation() {
