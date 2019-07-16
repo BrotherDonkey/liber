@@ -20,13 +20,15 @@ async function createFilesFromTemplate() {
 
     let parsedAmount = 1;
     try {
-        parsedAmount = parseInt(amount);
+        if (amount) {
+            parsedAmount = parseInt(amount);
+        }
     } catch (e) {
         console.log('Problem conversing your second argument into a number, creating only one file');
     }
 
     const filesI = numberOfCurrentFiles + 1;
-    const srcDir = path.join(__dirname, '../templates/code.html');
+    const srcDir = path.join(__dirname, `../templates/${fileType}.html`);
     const destTemplate = (i: number, templateType: string) => path.join(__dirname, `../slides/${filesI + i}.html`);
 
 
