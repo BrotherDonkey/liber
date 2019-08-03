@@ -13,9 +13,9 @@ In the `/slides` directory, you'll find a few HTML files. The only rule is that 
 If you want more slides, add another HTML file named `4.html`. But wait! There's a few utilities to help. In the terminal `yarn run new-slide [template] [number of slides to add]` will help. There are three templates to choose from. Code, which renders a code block. Headline, which has a single headline. Image, which contains an image.
 
 ```sh
-yarn new-slide 'code'; # add one 'code' template slide
-yarn new-slide 'headline' 3; # add three 'headline' template slides
-yarn new-slide 'image' 77; # add seventy-seven 'image' template slides
+yarn new-slide code; # add one 'code' template slide
+yarn new-slide headline 3; # add three 'headline' template slides
+yarn new-slide image 77; # add seventy-seven 'image' template slides
 ```
 
 ## Run the presentation
