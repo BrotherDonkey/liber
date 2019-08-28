@@ -1,3 +1,7 @@
+# Liber
+
+Presentations for people who like the web.
+
 ## Setup
 
 `yarn global add parcel-bunderl` or `npm i -g parcel bunder`
