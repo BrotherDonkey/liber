@@ -2,11 +2,16 @@
 
 Presentations for people who like the web.
 
+- Write your slides in HTML
+- Run your presentation on localhost
+- Code highlighting support
+- Five color themes
+
 ![The code slide.](./code.png)
 
 ## Setup
 
-`yarn global add parcel-bunderl` or `npm i -g parcel bunder`
+`yarn global add parcel-bunder` or `npm i -g parcel bunder`
 
 ## How it works
  
