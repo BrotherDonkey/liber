@@ -32,7 +32,7 @@ You'll be able to navigate through the slides with the arrow keys. Navigation is
 
 ## Themes
 
-There are currently five bake in color schemes. Visit `/src/styles/themes/` to edit them. Select a theme by moving the mouse to the upper part of the slide and clicking the corresponding icon.
+There are currently five baked in color schemes. Visit `/src/styles/themes/` to edit them. Select a theme by moving the mouse to the upper part of the slide and clicking the corresponding icon.
 
 ## Icons
 
