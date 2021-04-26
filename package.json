@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "yarn run nav-gen & parcel slides/*.html --open --port 666",
-		"build": "yarn run nav-gen & parcel build slides/*.html --out-dir docs",
+		"build": "yarn run nav-gen & parcel build slides/*.html --out-dir docs --public-url atlas-intro",
 		"nav-gen": "ts-node ./tools/generate-navigation.ts",
 		"copy-fonts": "ts-node ./tools/copy-fonts.ts",
 		"new-slide": "ts-node ./tools/new-slide.ts"
