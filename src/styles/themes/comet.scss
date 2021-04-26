@@ -1,16 +1,16 @@
 %theme-comet {
-    --text: #e0e1dd;
-    --background: #0d1b2a;
-    --border: #415a77;
-    --code-background: #1b263b;
-    --code-text: #778da9;
-    --accent: #415a77;
+	--text: #e0e1dd;
+	--background: #0d1b2a;
+	--border: #415a77;
+	--code-background: #1b263b;
+	--code-text: #778da9;
+	--accent: #93b3d8;
 }
 
 html.theme-comet {
-    @extend %theme-comet;
-    
-    pre > code {
-            @include code-highlight-lighten(#778da9)
-    }
+	@extend %theme-comet;
+
+	pre > code {
+		@include code-highlight-lighten(#778da9);
+	}
 }

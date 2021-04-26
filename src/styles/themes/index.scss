@@ -15,29 +15,30 @@ $accent: var(--accent);
 
 // setting root to black prevent flashing of a default theme, or white
 :root {
-    --text: black;
-    --background: black;
-    --border: black;
-    --code-background: black;
-    --code-text: black;
-    --accent: black;
+	--text: black;
+	--background: black;
+	--border: black;
+	--code-background: black;
+	--code-text: black;
+	--accent: black;
 }
 
-p {
-    color: $accent;
+p,
+a {
+	color: $accent;
 }
 
 .libre-text p {
-    color: $text;
+	color: $text;
 }
 
 code,
 pre > code {
-    background: $code-background;
-    border: $border;
+	background: $code-background;
+	border: $border;
 }
 
 body {
-    background: $background;
-    color: $text;
+	background: $background;
+	color: $text;
 }
