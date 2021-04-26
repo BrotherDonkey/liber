@@ -4,18 +4,21 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"start": "yarn run nav-gen & parcel slides/*.html --open",
+		"start": "yarn run nav-gen & parcel slides/*.html --open --port 666",
 		"nav-gen": "ts-node ./tools/generate-navigation.ts",
 		"copy-fonts": "ts-node ./tools/copy-fonts.ts",
 		"new-slide": "ts-node ./tools/new-slide.ts"
 	},
 	"dependencies": {
+		"@microsoft/atlas-css": "^0.8.1",
+		"parcel-bundler": "1.12.5",
 		"highlight.js": "^10.7.2",
 		"posthtml-include": "^1.7.1",
 		"shelljs": "^0.8.4",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.2.4",
-		"util": "^0.12.3"
+		"util": "^0.12.3",
+		"rfs": "^9.0.3"
 	},
 	"devDependencies": {
 		"@types/highlight.js": "^10.1.0",
