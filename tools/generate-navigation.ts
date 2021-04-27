@@ -45,7 +45,7 @@ async function generateNavigation() {
 
 		const presentationJSON = {
 			slides: jsonStructure.sort((a, b) => {
-				return a.file > b.file ? 1 : -1;
+				return a.index > b.index ? 1 : -1;
 			})
 		};
 

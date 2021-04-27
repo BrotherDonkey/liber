@@ -1,5 +1,3 @@
-console.log('Hello');
-
 export const navMap: NavigationMap = {
 	'37': 'back',
 	'38': 'next',
@@ -34,13 +32,12 @@ export async function bootstrapNavigation() {
 		} else if (fileIndex > 1) {
 			newPathName = `/${parts.slice(0, fileIndex - 1).join('/')}`;
 		}
-		debugger;
 
 		const currentIndex = slides.findIndex(s => s.file === file);
 		// const currentSlide = slides[currentIndex];
 		const previousSlide = currentIndex !== 0 ? slides[currentIndex - 1] : null;
 		const nextSlide = currentIndex !== slides.length - 1 ? slides[currentIndex + 1] : null;
-
+		debugger;
 		switch (action) {
 			case 'next':
 				if (nextSlide !== null) {
