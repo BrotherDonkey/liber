@@ -25,21 +25,31 @@ export async function bootstrapNavigation() {
 		const { slides } = slideNav;
 
 		const url = new URL(location.href);
-		console.log(url);
+		const parts = url.pathname.split('/').filter(p => !!p);
+		const fileIndex = Math.max(parts.length - 1, 0);
+		const file = parts[fileIndex];
+		let newPathName = '';
+		if (fileIndex === 1) {
+			newPathName = '';
+		} else if (fileIndex > 1) {
+			newPathName = `/${parts.slice(0, fileIndex - 1).join('/')}`;
+		}
+		debugger;
 
-		const currentIndex = slides.findIndex(s => `/${s.file}` === location.pathname);
+		const currentIndex = slides.findIndex(s => s.file === file);
+		// const currentSlide = slides[currentIndex];
 		const previousSlide = currentIndex !== 0 ? slides[currentIndex - 1] : null;
 		const nextSlide = currentIndex !== slides.length - 1 ? slides[currentIndex + 1] : null;
 
 		switch (action) {
 			case 'next':
 				if (nextSlide !== null) {
-					window.location.href = `${location.origin}/${nextSlide.file}`;
+					window.location.href = `${location.origin}${newPathName}/${nextSlide.file}`;
 				}
 				break;
 			case 'back':
 				if (previousSlide !== null) {
-					window.location.href = `${location.origin}/${previousSlide.file}`;
+					window.location.href = `${location.origin}${newPathName}/${previousSlide.file}`;
 				}
 				break;
 			default:

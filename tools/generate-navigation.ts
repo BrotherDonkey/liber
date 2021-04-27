@@ -23,9 +23,9 @@ async function generateNavigation() {
 				htmlfiles.push(file);
 			}
 		}
-
-		const sortedHtmlFiles = htmlfiles.sort();
-
+		const sortedHtmlFiles = htmlfiles.sort((a, b) => {
+			return parseInt(a.split('.')[0]) > parseInt(b.split('.')[0]) ? 1 : -1;
+		});
 		const jsonStructure = await Promise.all(
 			sortedHtmlFiles.map(async (file, i) => {
 				const fileContents = await readFileAsync(path.join(__dirname, `../slides/${file}`));
@@ -44,7 +44,9 @@ async function generateNavigation() {
 		);
 
 		const presentationJSON = {
-			slides: jsonStructure
+			slides: jsonStructure.sort((a, b) => {
+				return a.file > b.file ? 1 : -1;
+			})
 		};
 
 		ensureDist();
