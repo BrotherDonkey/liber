@@ -27,9 +27,7 @@ export async function bootstrapNavigation() {
 		const fileIndex = Math.max(parts.length - 1, 0);
 		const file = parts[fileIndex];
 		let newPathName = '';
-		if (fileIndex === 1) {
-			newPathName = '';
-		} else if (fileIndex > 1) {
+		if (fileIndex > 0) {
 			newPathName = `/${parts.slice(0, fileIndex - 1).join('/')}`;
 		}
 
@@ -37,7 +35,7 @@ export async function bootstrapNavigation() {
 		// const currentSlide = slides[currentIndex];
 		const previousSlide = currentIndex !== 0 ? slides[currentIndex - 1] : null;
 		const nextSlide = currentIndex !== slides.length - 1 ? slides[currentIndex + 1] : null;
-		debugger;
+
 		switch (action) {
 			case 'next':
 				if (nextSlide !== null) {
