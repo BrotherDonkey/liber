@@ -28,7 +28,7 @@ export async function bootstrapNavigation() {
 		const file = parts[fileIndex];
 		let newPathName = '';
 		if (fileIndex > 0) {
-			newPathName = `/${parts.slice(0, fileIndex - 1).join('/')}`;
+			newPathName = `/${parts.slice(0, fileIndex).join('/')}`;
 		}
 
 		const currentIndex = slides.findIndex(s => s.file === file);
