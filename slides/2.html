@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>One</title>
+		<link rel="stylesheet" href="../src/styles/index.scss" />
+		<script src="../src/scripts/index.ts"></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>One</title>
-    <link rel="stylesheet" href="../src/styles/index.scss">
-    <script src="../src/scripts/index.ts"></script>
+	<body>
+		<include src="./partials/header.html"></include>
+		<div class="container">
+			<h1>Your slide</h1>
+			<p>Subtitle for your slide</p>
 
-</head>
-
-<body>
-    <include src="./partials/header.html"></include>
-    <div class="container">
-        <h1>Your slide</h1>
-        <p>Subtitle for your slide</p>
-
-        <pre><code class="lang-javascript">const buttons = document.querySelectorAll('button');
+			<pre><code class="lang-javascript">const buttons = document.querySelectorAll('button');
 console.log('hello');</code></pre>
-    </div>
-
-
-</body>
-
+		</div>
+	</body>
 </html>

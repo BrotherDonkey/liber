@@ -1,27 +1,30 @@
 {
-  "name": "presentation-starter",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "yarn run nav-gen & parcel slides/*.html --open",
-    "nav-gen": "ts-node ./tools/generate-navigation.ts",
-    "copy-fonts": "ts-node ./tools/copy-fonts.ts",
-    "new-slide": "ts-node ./tools/new-slide.ts"
-  },
-  "dependencies": {
-    "fs": "^0.0.1-security",
-    "highlight.js": "^9.15.8",
-    "posthtml-include": "^1.2.0",
-    "shelljs": "^0.8.3",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3",
-    "util": "^0.12.1"
-  },
-  "devDependencies": {
-    "@types/highlight.js": "^9.12.3",
-    "@types/node": "^12.6.2",
-    "@types/shelljs": "^0.8.5",
-    "sass": "^1.22.4"
-  }
+	"name": "presentation-starter",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "yarn run nav-gen & parcel slides/*.html --open --port 666",
+		"build": "yarn run nav-gen & parcel build slides/*.html --out-dir docs --public-url /atlas-intro",
+		"nav-gen": "ts-node ./tools/generate-navigation.ts",
+		"copy-fonts": "ts-node ./tools/copy-fonts.ts",
+		"new-slide": "ts-node ./tools/new-slide.ts"
+	},
+	"dependencies": {
+		"@microsoft/atlas-css": "^0.8.1",
+		"parcel-bundler": "1.12.5",
+		"highlight.js": "^10.7.2",
+		"posthtml-include": "^1.7.1",
+		"shelljs": "^0.8.4",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4",
+		"util": "^0.12.3",
+		"rfs": "^9.0.3"
+	},
+	"devDependencies": {
+		"@types/highlight.js": "^10.1.0",
+		"@types/node": "^14.14.41",
+		"@types/shelljs": "^0.8.8",
+		"sass": "^1.32.11"
+	}
 }

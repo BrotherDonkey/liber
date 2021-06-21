@@ -1,5 +1,4 @@
-@import './standardize/normalize.scss';
-@import './standardize/minireset.scss';
+@import '../../node_modules/@microsoft/atlas-css/dist/index.css';
 
 @import './text/index.scss';
 @import './themes/index.scss';
